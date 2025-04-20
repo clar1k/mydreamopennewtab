@@ -9,11 +9,10 @@ export function SearchBar() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // For now, we'll just open a Google search
-      window.open(
-        `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`,
-        "_blank"
-      );
+      const url = `https://www.google.com/search?q=${encodeURIComponent(
+        searchQuery
+      )}`;
+      window.location.href = url;
     }
   };
 

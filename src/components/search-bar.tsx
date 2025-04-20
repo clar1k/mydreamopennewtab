@@ -6,8 +6,8 @@ import { useState } from "react";
 export function SearchBar() {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSearch = (event: React.FormEvent) => {
+    event.preventDefault();
     if (searchQuery.trim()) {
       const url = `https://www.google.com/search?q=${encodeURIComponent(
         searchQuery
